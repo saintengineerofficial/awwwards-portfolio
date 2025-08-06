@@ -11,7 +11,7 @@ type Props = {
 export function Planet(props: Props) {
   const shapeContainer = useRef<any>(null);
   const shperesContainer = useRef<any>(null);
-  const ringContainer = useRef<any>(null);
+  const ringContainer = useRef<Mesh>(null);
   const { nodes, materials } = useGLTF("/models/Planet.glb");
 
   useGSAP(() => {
@@ -39,14 +39,14 @@ export function Planet(props: Props) {
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Sphere.geometry}
+          geometry={(nodes.Sphere as any).geometry}
           material={materials["Material.002"]}
           rotation={[0, 0, 0.741]}
         />
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Sphere2.geometry}
+          geometry={(nodes.Sphere2 as any).geometry}
           material={materials["Material.001"]}
           position={[0.647, 1.03, -0.724]}
           rotation={[0, 0, 0.741]}
@@ -57,7 +57,7 @@ export function Planet(props: Props) {
         ref={ringContainer}
         castShadow
         receiveShadow
-        geometry={nodes.Ring.geometry}
+        geometry={(nodes.Ring as any).geometry}
         material={materials["Material.001"]}
         rotation={[-0.124, 0.123, -0.778]}
         scale={2}
