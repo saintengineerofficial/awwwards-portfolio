@@ -10,16 +10,19 @@ type Props = {
   title: string;
   text: string;
   textColor: string;
+  withScrollTrigger?: boolean;
 };
 
-const AnimatedHeaderSection = ({ subTitle, title, text, textColor }: Props) => {
+const AnimatedHeaderSection = ({ subTitle, title, text, textColor, withScrollTrigger = false }: Props) => {
   const contextRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const shouldSplitTitle = title.includes(" ");
   const titleParts = shouldSplitTitle ? title.split(" ") : [title];
 
   useGSAP(() => {
-    const tl = gsap.timeline()
+    const tl = gsap.timeline({
+      scrollTrigger: withScrollTrigger ? { trigger: contextRef.current } : undefined
+    })
 
     tl.from(contextRef.current, {
       y: '50vh',

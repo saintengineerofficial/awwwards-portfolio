@@ -6,7 +6,7 @@ import { Planet } from '@/components/Planet';
 import { Environment } from '@react-three/drei';
 import { Lightformer } from '@react-three/drei';
 import { Float } from '@react-three/drei';
-import { useMediaQuery } from "react-responsive";
+import { useIsDesktop } from '@/hooks/useIsDesktop';
 
 type Props = {}
 
@@ -15,7 +15,7 @@ const text = `I help growing brands and startups gain an
               results driven webs/apps`;
 
 const Hero = (props: Props) => {
-  const isMobile = useMediaQuery({ maxWidth: 853 });
+  const isMobile = useIsDesktop(853);
 
   return (
     <section className='flex flex-col justify-end min-h-screen'>

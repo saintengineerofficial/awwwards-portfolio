@@ -5,7 +5,10 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Mesh, Group } from 'three';
 
-export function Planet(props) {
+type Props = {
+}
+
+export function Planet(props: Props) {
   const shapeContainer = useRef<Group>(null);
   const shperesContainer = useRef<Group>(null);
   const ringContainer = useRef<Mesh>(null);
