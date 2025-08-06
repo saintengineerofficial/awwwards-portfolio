@@ -11,19 +11,10 @@ gsap.registerPlugin(Observer);
 // 触摸滑动（touch, drag）
 // 键盘按键（key）
 
+const Marquee = ({ items, className = '', iconClassName = '', reverse = false }) => {
+  const containerRef = useRef(null);
+  const itemsRef = useRef([]);
 
-type Props = {
-  items: string[];
-  className?: string;
-  iconClassName?: string;
-  reverse?: boolean;
-}
-
-const Marquee = ({ items, className, iconClassName, reverse = false }: Props) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const itemsRef = useRef<(HTMLSpanElement | null)[]>([]);
-
-  // @ts-ignore
   function horizontalLoop(items, config) {
     items = gsap.utils.toArray(items);
     config = config || {};
@@ -83,6 +74,7 @@ const Marquee = ({ items, className, iconClassName, reverse = false }: Props) =>
   }
 
   useEffect(() => {
+    if (itemsRef.current.length === 0) return;
     const tl = horizontalLoop(itemsRef.current, {
       repeat: -1,
       paddingRight: 30,
@@ -108,18 +100,18 @@ const Marquee = ({ items, className, iconClassName, reverse = false }: Props) =>
 
   return (
     <div
-      ref={containerRef}
-      className={twMerge("overflow-hidden w-full h-20 md:h-[100px] flex items-center marquee-text-responsive font-light uppercase whitespace-nowrap text-white bg-black", className)}>
+      ref={ containerRef }
+      className={ twMerge("overflow-hidden w-full h-20 md:h-[100px] flex items-center marquee-text-responsive font-light uppercase whitespace-nowrap text-white bg-black", className) }>
       <div className='flex'>
-        {items.map((item, index) => (
+        { items.map((item, index) => (
           <span
-            key={index}
+            key={ index }
             className='flex items-center px-16 gap-x-32'
-            ref={el => { itemsRef.current[index] = el }}>
-            {item}
-            <Sparkle className={twMerge('size-10', iconClassName)} />
+            ref={ el => { itemsRef.current[index] = el } }>
+            { item }
+            <Sparkle className={ twMerge('size-10', iconClassName) } />
           </span>
-        ))}
+        )) }
       </div>
     </div>
   )
