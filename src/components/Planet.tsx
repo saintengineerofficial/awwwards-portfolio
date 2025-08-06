@@ -11,7 +11,7 @@ type Props = {
 export function Planet(props: Props) {
   const shapeContainer = useRef<any>(null);
   const shperesContainer = useRef<any>(null);
-  const ringContainer = useRef<Mesh>(null);
+  const ringContainer = useRef<any>(null);
   const { nodes, materials } = useGLTF("/models/Planet.glb");
 
   useGSAP(() => {
