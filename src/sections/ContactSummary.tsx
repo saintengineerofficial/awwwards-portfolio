@@ -17,8 +17,8 @@ const ContactSummary = () => {
         start: "center center", // 当容器的“中心”对齐视口的“中心”时触发
         end: "+=800 center", // 从 start 开始，再向下滚动 800px 后结束
         scrub: 0.5, // 动画会根据滚动位置同步执行，0.5 表示延迟 0.5 秒缓冲
-        pin: true, //滚动时固定这个元素（让它 stay 在原位）
-        pinSpacing: true, //被 pin 后，页面不会跳动（会为其腾出高度空间）
+        // pin: true, //滚动时固定这个元素（让它 stay 在原位）
+        // pinSpacing: true, //被 pin 后，页面不会跳动（会为其腾出高度空间）
         markers: false,
       }
     })
