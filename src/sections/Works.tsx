@@ -7,15 +7,11 @@ import Image from 'next/image';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-type Props = {}
-
 const text = `Featured projects that have been meticulously
     crafted with passion to drive
     results and impact.`;
 
-
-
-const Works = (props: Props) => {
+const Works = () => {
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
 
   const overlayRefs = useRef<(HTMLDivElement | null)[]>([]);

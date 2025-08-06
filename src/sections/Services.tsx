@@ -7,13 +7,11 @@ import gsap from 'gsap';
 import React, { useRef } from 'react'
 import { twMerge } from 'tailwind-merge';
 
-type Props = {}
-
 const text = `I build secure, high-performance full-stack apps
               with smooth UX to drive growth 
               not headaches.`;
 
-const Services = (props: Props) => {
+const Services = () => {
   const serviceRefs = useRef<(HTMLDivElement | null)[]>([]);
   const isDesktop = useIsDesktop(768);
 

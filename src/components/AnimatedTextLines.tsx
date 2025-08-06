@@ -14,7 +14,7 @@ type Props = {
 const AnimatedTextLines = ({ text, className }: Props) => {
   const lines = text.split("\n").filter((line) => line.trim() !== "");
   const containerRef = useRef<HTMLDivElement>(null);
-  const lineRefs = useRef<HTMLSpanElement[]>([]);
+  const lineRefs = useRef<(HTMLSpanElement | null)[]>([]);
 
   useGSAP(() => {
     if (lineRefs.current.length > 0) {
@@ -36,7 +36,7 @@ const AnimatedTextLines = ({ text, className }: Props) => {
   return (
     <div ref={containerRef} className={className}>
       {lines.map((line, index) => (
-        <span ref={(el) => lineRefs.current[index] = el} key={index} className='block leading-relaxed tracking-wide text-pretty'>
+        <span ref={(el) => { lineRefs.current[index] = el }} key={index} className='block leading-relaxed tracking-wide text-pretty'>
           {line}
         </span>
       ))}

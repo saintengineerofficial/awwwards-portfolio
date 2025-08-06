@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { Mesh, Group } from 'three';
 
 type Props = {
+  scale: number;
 }
 
 export function Planet(props: Props) {

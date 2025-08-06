@@ -6,9 +6,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Link as ScrollLink } from 'react-scroll';
 
-type Props = {};
-
-const Navbar = (props: Props) => {
+const Navbar = () => {
   const navRef = useRef<HTMLDivElement>(null);
   const linksRef = useRef<(HTMLDivElement | null)[]>([]);
   const topLineRef = useRef<HTMLDivElement>(null);

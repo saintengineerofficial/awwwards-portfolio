@@ -6,8 +6,6 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import React from 'react'
 
-type Props = {}
-
 const text = `Got a question, how or project Idea?
               WE’D love to hear from you and discus further!`;
 
@@ -19,7 +17,7 @@ const items = [
   "just imagin, I code",
 ];
 
-const Contact = (props: Props) => {
+const Contact = () => {
 
   useGSAP(() => {
     gsap.from(".social-link", {

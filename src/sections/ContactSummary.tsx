@@ -4,12 +4,10 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import React, { useRef } from 'react'
 
-type Props = {}
-
 const items = ["Innovation", "Precision", "Trust", "Collaboration", "Excellence"];
 const items2 = ["contact us", "contact us", "contact us", "contact us", "contact us"];
 
-const ContactSummary = (props: Props) => {
+const ContactSummary = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {

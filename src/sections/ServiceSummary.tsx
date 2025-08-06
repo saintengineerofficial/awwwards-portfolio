@@ -5,9 +5,7 @@ import { ScrollTrigger } from 'gsap/all'
 import React from 'react'
 gsap.registerPlugin(ScrollTrigger)
 
-type Props = {}
-
-const ServiceSummary = (props: Props) => {
+const ServiceSummary = () => {
 
   useGSAP(() => {
     gsap.to('#title-service-1', {

@@ -6,7 +6,6 @@ import gsap from 'gsap';
 import Image from 'next/image';
 import React, { useRef } from 'react'
 
-type Props = {}
 
 const text = `Passionate about clean architecture
               I build scalable, high-performance solutions
@@ -19,7 +18,7 @@ const aboutText = `Obsessed with building fast, intuitive apps—from pixel-perf
                   🧗 Rock climbing (problem-solving with real stakes)
                   🎸 Strumming chords while CI pipelines pass (multitasking at its finest)`;
 
-const About = (props: Props) => {
+const About = () => {
   const imgRef = useRef<HTMLImageElement>(null);
 
   useGSAP(() => {

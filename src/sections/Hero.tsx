@@ -8,13 +8,11 @@ import { Lightformer } from '@react-three/drei';
 import { Float } from '@react-three/drei';
 import { useIsDesktop } from '@/hooks/useIsDesktop';
 
-type Props = {}
-
 const text = `I help growing brands and startups gain an
               unfair advantage through premium
               results driven webs/apps`;
 
-const Hero = (props: Props) => {
+const Hero = () => {
   const isMobile = useIsDesktop(853);
 
   return (
