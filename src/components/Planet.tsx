@@ -3,16 +3,15 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { Mesh, Group } from 'three';
 
 type Props = {
   scale: number;
 }
 
 export function Planet(props: Props) {
-  const shapeContainer = useRef<Group>(null);
-  const shperesContainer = useRef<Group>(null);
-  const ringContainer = useRef<Mesh>(null);
+  const shapeContainer = useRef<any>(null);
+  const shperesContainer = useRef<any>(null);
+  const ringContainer = useRef<any>(null);
   const { nodes, materials } = useGLTF("/models/Planet.glb");
 
   useGSAP(() => {
