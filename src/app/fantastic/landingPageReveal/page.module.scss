@@ -1,0 +1,306 @@
+@import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
+
+
+.loader{
+    font-family: "PP Neue Montreal", sans-serif;
+}
+
+.loader {
+    h1{
+        text-align: center;
+        color: #fff;
+        font-size: 5rem;
+        font-weight: 500;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        span{
+            font-family: "PP Neue Montreal", sans-serif;
+            font-weight: 500;
+            font-style: italic;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+}
+
+.loader {
+    a,p{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+.heroImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    overflow: hidden;
+}
+
+.heroImage{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100svh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.nav{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 1.25em 1.5em;
+    display: flex;
+    gap: 1.5em;
+    will-change: transform;
+}
+
+.nav > div{
+    flex: 1;
+}
+
+.logo >a {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.navLinks{
+    display: flex;
+    gap: 1.5em;
+    justify-content: center;
+}
+
+.btn{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 40%;
+    background-color: #fff;
+    color: #000 !important;
+    font-size: 14px;
+}
+
+.header{
+    width: 100%;
+    height: 100%;
+    padding-top: 25svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.cta{
+    position: absolute;
+    left: 50%;
+    bottom: 3em;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 60px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #fff;
+    border-radius: 4rem;
+    will-change: transform;
+}
+
+.ctaLabel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ctaLabel > p{
+    color: #000;
+}
+
+.ctaIcon{
+    position: relative;
+    height: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #303030;
+    border-radius: 60px;
+    will-change: transform;
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100svh;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.block{
+    width: 100%;
+    height: 100%;
+    background-color: #303030;
+}
+
+.introLogo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 0.25rem;
+}
+
+.wordOne{
+    position: relative;
+    left: -0.5rem;
+    padding-right: 0.25rem;
+}
+
+.word > h1{
+    font-size: 2.5rem;
+}
+
+.divider{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: center top;
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+}
+
+.spinnerContainer{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.spinner{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+    border-top-color: #303030;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.counter{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.counter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.count{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.digit{
+    flex: 1;
+    padding-top: 1rem;
+}
+
+.digit > h1{
+    font-size: 15rem;
+    font-weight: 400;
+    font-family: "PP Neue Montreal", sans-serif;
+}
+.nav{
+    transform: translateY(-120%);
+}
+
+.cta{
+    transform: translateX(-50%) scale(0);
+}
+
+.ctaIcon{
+    transform: scale(0);
+}
+
+.line,
+.ctaLabel,
+.word,
+.count > .digit{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.line h1,.line p,.ctaLabel p,.digit h1{
+    position: relative;
+    transform: translateY(120%);
+    will-change: transform;
+}
+
+.wordOne > h1{
+    transform: translateX(-120%);
+}
+
+.wordTwo > h1{
+    transform: translateY(120%);
+}
+
+.block{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.divider{
+    transform: scaleY(0);
+}
+
+.heroImage{
+    transform: scale(1.5);
+    will-change: transform;
+}
