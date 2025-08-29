@@ -7,8 +7,6 @@ const animations = [
   { link: "/timelineScroll", title: "TimelineScroll" },
   { link: "/cardsStack", title: "CardsStack" },
   { link: "/scrollMagic", title: "ScrollMagic" },
-  { link: "/minimap", title: "Minimap" },
-  { link: "/parallaxSnaps", title: "ParallaxSnaps" },
   { link: "/landingPageReveal", title: "LandingPageReveal" },
 ];
 
@@ -47,9 +45,9 @@ const Fantastic = () => {
                   <div className='flex items-center gap-2'>
                     <small>by</small>
                     <div className='flex items-center gap-2'>
-                      <Image src='/images/as.png' alt='as' width={32} height={32} className='rounded-full' />
+                      <Image src='/fantastic/as.png' alt='as' width={32} height={32} className='rounded-full' />
                       <strong
-                        className='text-xl font-semibold relative before:transition-all before:duration-300 
+                        className='text-xl font-semibold relative whitespace-nowrap before:transition-all before:duration-300 
                       before:absolute before:left-0 before:-bottom-1 before:w-full before:h-[2px] before:bg-gray-300 before:scale-x-0 before:origin-left
                       hover:before:bg-gray-900 hover:before:scale-x-100'>
                         Saint Engineer Official

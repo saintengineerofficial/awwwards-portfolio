@@ -4,14 +4,14 @@ import Image from "next/image";
 const timelineData = [
   {
     timeSignal: "January 2010",
-    url: "/images/one.png",
+    url: "/fantastic/one.png",
     description: "Tesla introduces its first electric car, the Roadster, showing the world the potential of electric vehicles with a range of over 200 miles",
   },
-  { timeSignal: "March 2015", url: "/images/two.png", description: "Tesla launches the Model S, revolutionizing the luxury electric sedan market with enhanced range and performance" },
-  { timeSignal: "July 2020", url: "/images/three.png", description: "Major automakers announce significant investments in EV technology as global demand continues to rise" },
-  { timeSignal: "February 2021", url: "/images/four.png", description: "Several countries introduce legislation to phase out combustion engines within the next decade" },
-  { timeSignal: "October 2022", url: "/images/five.png", description: "Battery technology breakthroughs enable more affordable electric vehicles with longer ranges" },
-  { timeSignal: "May 2024", url: "/images/six.png", description: "Electric vehicle sales surpass traditional combustion engine vehicles in major global markets" },
+  { timeSignal: "March 2015", url: "/fantastic/two.png", description: "Tesla launches the Model S, revolutionizing the luxury electric sedan market with enhanced range and performance" },
+  { timeSignal: "July 2020", url: "/fantastic/three.png", description: "Major automakers announce significant investments in EV technology as global demand continues to rise" },
+  { timeSignal: "February 2021", url: "/fantastic/four.png", description: "Several countries introduce legislation to phase out combustion engines within the next decade" },
+  { timeSignal: "October 2022", url: "/fantastic/five.png", description: "Battery technology breakthroughs enable more affordable electric vehicles with longer ranges" },
+  { timeSignal: "May 2024", url: "/fantastic/six.png", description: "Electric vehicle sales surpass traditional combustion engine vehicles in major global markets" },
 ];
 
 const TimelineScroll = () => {

@@ -6,12 +6,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const constant = [
-  { signal: "X01-842", url: "/images/one.png" },
-  { signal: "X031-81", url: "/images/two.png" },
-  { signal: "X31-822", url: "/images/three.png" },
-  { signal: "X111-82", url: "/images/four.png" },
-  { signal: "Y21-842", url: "/images/five.png" },
-  { signal: "C01-842", url: "/images/six.png" },
+  { signal: "X01-842", url: "/fantastic/one.png" },
+  { signal: "X031-81", url: "/fantastic/two.png" },
+  { signal: "X31-822", url: "/fantastic/three.png" },
+  { signal: "X111-82", url: "/fantastic/four.png" },
+  { signal: "Y21-842", url: "/fantastic/five.png" },
+  { signal: "C01-842", url: "/fantastic/six.png" },
 ];
 
 const CardsStack = () => {
