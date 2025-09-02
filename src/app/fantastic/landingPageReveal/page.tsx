@@ -137,7 +137,7 @@ const Page = () => {
         <div ref={heroImageRef} className="absolute top-0 w-screen h-[100svh] overflow-hidden z-[-1] scale-150 will-change-transform">
           <img
             className="w-full h-full object-cover"
-            src="/fantastic/room.jpg"
+            src="/fantastic/desktop9.jpg"
             alt="hero"
           />
         </div>

@@ -8,6 +8,7 @@ const animations = [
   { link: "/cardsStack", title: "CardsStack" },
   { link: "/scrollMagic", title: "ScrollMagic" },
   { link: "/landingPageReveal", title: "LandingPageReveal" },
+  { link: "/smoothScroll", title: "SmoothScroll" },
 ];
 
 const Fantastic = () => {
@@ -21,13 +22,13 @@ const Fantastic = () => {
               <Link href={`fantastic/${a.link}`}>
                 <div className='relative group overflow-hidden'>
                   <div
-                    className='absolute inset-0 w-full h-full opacity-0 transition-opacity duration-300 
-                  group-hover:opacity-100 flex items-center justify-center rounded-3xl shadow-lg'>
+                    className='absolute inset-0 w-full h-full opacity-0 transition-opacity duration-300
+                  group-hover:opacity-100 flex items-center justify-center rounded-3xl shadow-lg overflow-hidden'>
                     <div className='text-black bg-white px-5 py-3 rounded-lg flex items-center gap-1 transition-all duration-300  hover:bg-[#313131] hover:text-white'>
                       <ArrowRight className='size-5' />
-                      <span className='text-sm'>点击预览</span>
+                      <span className='text-sm'>Preview</span>
                     </div>
-                    <div className='absolute bottom-12 w-full px-8 flex items-center justify-between'>
+                    <div className='absolute bottom-0 w-full px-8 flex items-center justify-between bg-white/40 backdrop-blur-sm shadow-lg overflow-hidden'>
                       <div className='flex flex-col gap-2'>
                         <span className='text-sm'>CASE</span>
                         <p className='font-semibold text-xl'>{a.title}</p>
@@ -38,7 +39,7 @@ const Fantastic = () => {
                       </div>
                     </div>
                   </div>
-                  <iframe src={`fantastic/${a.link}`} title='页面预览' className='w-full h-[400px] rounded-3xl overflow-hidden pointer-events-none ' />
+                  <iframe src={`fantastic/${a.link}`} title='page preview' className='w-full h-[400px] rounded-3xl overflow-hidden pointer-events-none ' />
                 </div>
                 <div className='flex items-center gap-2 text-black mt-4'>
                   <h3 className='text-xl font-semibold'>{a.title}</h3>
